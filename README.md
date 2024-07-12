@@ -80,7 +80,7 @@ Each Jupyter notebook for this project aimed at investigating specific aspects o
 
 To find the most demanded skills for the top 3 most popular data roles. The data filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills people should pay attention to depending on the role they are targeting.
 
-View the notebook with detailed steps here: [2_Skills_Count.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
+View the notebook with detailed steps here: [2_Skills_Demand.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
 
 
 # Visusalize Data
@@ -117,7 +117,7 @@ Bar graph visualizing the salary for the top 3 data roles and their top 5 skills
 
 To find how skills are trending in 2023 for Data Analysts, data analyst positions were filtered and grouped the skills by the month of the job postings. This got the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
-View the notebook with detailed steps here:
+View the notebook with detailed steps here: [3_Skills_Trend.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/3_Skills_Trend.ipynb)
 
 
 ```python
@@ -134,3 +134,16 @@ plt.show()
 # Result
 
 ![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output3.png)
+
+Bar graph visualizing the trending top skills for data analysts in the US in 2023.
+
+# Insights About the Graph
+
+- SQL remains the most consistently demanded skill throughout the year, although it shows a gradual decrease in demand.
+
+- Excel experienced a significant increase in demand starting around June, surpassing both Python and Tableau by the end of the year.
+
+- Both Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts. 
+
+- Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's start.
+
