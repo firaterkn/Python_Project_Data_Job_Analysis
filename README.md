@@ -135,7 +135,7 @@ plt.show()
 
 ![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output3.png)
 
-Bar graph visualizing the trending top skills for data analysts in the US in 2023.
+Line graph visualizing the trending top skills for data analysts in the US in 2023.
 
 # Insights About the Graph
 
