@@ -80,7 +80,7 @@ Each Jupyter notebook for this project aimed at investigating specific aspects o
 
 To find the most demanded skills for the top 3 most popular data roles. The data filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills people should pay attention to depending on the role they are targeting.
 
-View my notebook with detailed steps here: [2_Skills_Count.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
+View the notebook with detailed steps here: [2_Skills_Count.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
 
 
 # Visusalize Data
@@ -89,22 +89,11 @@ View my notebook with detailed steps here: [2_Skills_Count.ipynb](https://github
 
 fig, ax = plt.subplots(len(job_titles), 1, figsize= (10,6))
 
-sns.set_theme(style="ticks")
 
 for i, job_title in enumerate(job_titles):
     df_plotter = df_skill_percent[df_skill_percent.job_title_short == job_title].head()
     bars = sns.barplot(data=df_plotter, y="job_skills", x="skill_percent", ax=ax[i], hue="skill_count", ci=None, dodge=False, palette="dark:b")
     
-    ax[i].set_ylabel("")
-    ax[i].set_xlabel("")
-    ax[i].legend().set_visible(False)
-    ax[i].set_xlim(0,80)
-
-    for container in bars.containers:
-        bars.bar_label(container, fmt="%.2f%%", padding=5)
-
-fig.suptitle("Percentages of Features that are Likely to be Desired", fontsize=16)
-fig.tight_layout(h_pad=1)
 plt.show()
 
 ```
@@ -123,3 +112,25 @@ Bar graph visualizing the salary for the top 3 data roles and their top 5 skills
 - Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%).
 
 
+
+### 2. How are in-demand skills trending for Data Analysts?
+
+To find how skills are trending in 2023 for Data Analysts, data analyst positions were filtered and grouped the skills by the month of the job postings. This got the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
+
+View the notebook with detailed steps here:
+
+
+```python
+from matplotlib.ticker import PercentFormatter
+
+df_plot = df_DA_US_percent.iloc[:, :5]
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+
+plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+```
+
+# Result
+
+![Visualization for the code](3_Project\output3.png)
