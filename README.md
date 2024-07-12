@@ -81,3 +81,44 @@ Each Jupyter notebook for this project aimed at investigating specific aspects o
 To find the most demanded skills for the top 3 most popular data roles. The data filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills people should pay attention to depending on the role they are targeting.
 
 View my notebook with detailed steps here: [2_Skills_Count.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
+
+
+# Visusalize Data
+
+```python
+
+fig, ax = plt.subplots(len(job_titles), 1, figsize= (10,6))
+
+sns.set_theme(style="ticks")
+
+for i, job_title in enumerate(job_titles):
+    df_plotter = df_skill_percent[df_skill_percent.job_title_short == job_title].head()
+    bars = sns.barplot(data=df_plotter, y="job_skills", x="skill_percent", ax=ax[i], hue="skill_count", ci=None, dodge=False, palette="dark:b")
+    
+    ax[i].set_ylabel("")
+    ax[i].set_xlabel("")
+    ax[i].legend().set_visible(False)
+    ax[i].set_xlim(0,80)
+
+    for container in bars.containers:
+        bars.bar_label(container, fmt="%.2f%%", padding=5)
+
+fig.suptitle("Percentages of Features that are Likely to be Desired", fontsize=16)
+fig.tight_layout(h_pad=1)
+plt.show()
+
+```
+
+# Result
+![Visualization for the code](3_Project\output2.png)
+Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.
+
+# Insights About the Graph
+
+- SQL is the most requested skill for Data Analysts and Data Engineers, with it in over half the job postings for both roles. For Data Scientist, Python is the most sought-after skill, appearing in 72% of job postings.
+    
+- Data Engineers require more specialized technical skills (AWS, Azure, Spark) compared to Data Analysts and Data Scientists who are expected to be proficient in more general data management and analysis tools (Excel, Tableau).
+    
+- Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%).
+
+
