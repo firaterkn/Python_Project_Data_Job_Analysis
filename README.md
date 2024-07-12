@@ -111,6 +111,7 @@ plt.show()
 
 # Result
 ![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output2.png?raw=true)
+
 Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.
 
 # Insights About the Graph
