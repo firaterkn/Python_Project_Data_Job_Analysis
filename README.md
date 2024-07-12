@@ -133,4 +133,4 @@ plt.show()
 
 # Result
 
-![Visualization for the code](3_Project\output3.png)
+![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output3.png)
