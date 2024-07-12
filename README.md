@@ -112,7 +112,7 @@ plt.show()
 # Result
 ![Visualization for the code](3_Project\output2.png)
 Bar graph visualizing the salary for the top 3 data roles and their top 5 skills associated with each.
-
+a
 # Insights About the Graph
 
 - SQL is the most requested skill for Data Analysts and Data Engineers, with it in over half the job postings for both roles. For Data Scientist, Python is the most sought-after skill, appearing in 72% of job postings.
