@@ -76,14 +76,14 @@ df_US = df[df.job_country == "United States"]
 Each Jupyter notebook for this project aimed at investigating specific aspects of the data job market. Each question was approached as follows:
 
 
-### 1. What are the most demanded skills for the top 3 most popular data roles?
+# 1. What are the most demanded skills for the top 3 most popular data roles?
 
 To find the most demanded skills for the top 3 most popular data roles. The data filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills people should pay attention to depending on the role they are targeting.
 
 View the notebook with detailed steps here: [2_Skills_Demand.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/2_Skills_Demand.ipynb)
 
 
-# Visusalize Data
+### Visusalize Data
 
 ```python
 
@@ -112,8 +112,7 @@ Bar graph visualizing the salary for the top 3 data roles and their top 5 skills
 - Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (72%) and Data Engineers (65%).
 
 
-
-### 2. How are in-demand skills trending for Data Analysts?
+# 2. How are in-demand skills trending for Data Analysts?
 
 To find how skills are trending in 2023 for Data Analysts, data analyst positions were filtered and grouped the skills by the month of the job postings. This got the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
@@ -147,3 +146,8 @@ Line graph visualizing the trending top skills for data analysts in the US in 20
 
 - Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's start.
 
+# 3. How well do jobs and skills pay for Data Analysts?
+
+To identify the highest-paying roles and skills, jobs in the United States were examined and their median salaries were analyzed. First, the salary distributions of common data jobs such as Data Scientist, Data Engineer, and Data Analyst were reviewed to gain an understanding of which jobs are paid the most.
+
+View the notebook with detailed steps here: 
