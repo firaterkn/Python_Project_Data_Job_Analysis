@@ -201,5 +201,5 @@ plt.show()
 
 Here's the breakdown of the highest-paid & most in-demand skills for data analysts in the US:
 
-![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output4.png)
+![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output4.1.png)
 
