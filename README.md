@@ -9,10 +9,10 @@ The data sourced from Hugging Face which provides a foundation for the analysis,
 
 The questions to be answered in the project are below:
 
-    1. What are the skills most in demand for the top 3 most popular data roles?
-    2. How are in-demand skills trending for Data Analysts?
-    3. How well do jobs and skills pay for Data Analysts?
-    4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
+1. What are the skills most in demand for the top 3 most popular data roles?
+2. How are in-demand skills trending for Data Analysts?
+3. How well do jobs and skills pay for Data Analysts?
+    
 
 
 
@@ -22,9 +22,9 @@ For the deep dive into the data analyst job market, the power of a few key tools
 
     1. Python: The backbone of the analysis, allowing to analyze the data and find critical insights. Also following Python libraries were used:
 
-        1.1 Pandas Library: Analyzing the data.
-        1.2 Matplotlib Library: Visualizing the data.
-        1.3 Seaborn Library: To create more advanced visuals.
+       1.1 Pandas Library: Analyzing the data.
+       1.2 Matplotlib Library: Visualizing the data.
+       1.3 Seaborn Library: To create more advanced visuals.
         
     2. Jupyter Notebooks: Tool used to run Python scripts that allow easy addition of notes and analysis.
 
