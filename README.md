@@ -118,6 +118,7 @@ To find how skills are trending in 2023 for Data Analysts, data analyst position
 
 View the notebook with detailed steps here: [3_Skills_Trend.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/3_Skills_Trend.ipynb)
 
+### Visualize Data
 
 ```python
 from matplotlib.ticker import PercentFormatter
@@ -150,4 +151,55 @@ Line graph visualizing the trending top skills for data analysts in the US in 20
 
 To identify the highest-paying roles and skills, jobs in the United States were examined and their median salaries were analyzed. First, the salary distributions of common data jobs such as Data Scientist, Data Engineer, and Data Analyst were reviewed to gain an understanding of which jobs are paid the most.
 
-View the notebook with detailed steps here: 
+View the notebook with detailed steps here: [4_Salary_Analysis.ipynb](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/4_Salary_Analysis.ipynb)
+
+### Visualize Data
+
+```python
+sns.boxplot(data=df_US_top6, x="salary_year_avg", y="job_title_short", order=job_order)
+
+ticks_x = plt.FuncFormatter(lambda y, pos: f"${int(y/1000)}K")
+plt.gca().xaxis.set_major_formatter(ticks_x)
+plt.show()
+```
+
+# Result
+
+![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output4.png)
+
+Box plot visualizing the salary distributions for the top 6 data job titles.
+
+# Insights About the Graph
+
+- There's a significant variation in salary ranges across different job titles. Data Scientist positions tend to have the highest salary potential, with up to $600K, indicating the high value placed on advanced data skills and experience in the industry.
+
+- Senior Data Engineer and Senior Data Scientist roles show a considerable number of outliers on the higher end of the salary spectrum, suggesting that exceptional skills or circumstances can lead to high pay in these roles. In contrast, Data Analyst roles demonstrate more consistency in salary, with fewer outliers.
+
+- The median salaries increase with the seniority and specialization of the roles. Senior roles (Senior Data Scientist, Senior Data Engineer) not only have higher median salaries but also larger differences in typical salaries, reflecting greater variance in compensation as responsibilities increase.
+
+## Highest Paid & Most Demanded Skills for Data Analysts
+
+Next, the analysis was narrowed and focused solely on data analyst roles. The highest-paid skills and the most in-demand skills were examined. Two bar charts were used to showcase these findings.
+
+### Visualize Data 
+
+```python
+
+fig, ax = plt.subplots(2, 1)  
+
+# Top 10 Highest Paid Skills for Data Analysts
+sns.barplot(data=df_DA_top_pay, x="median", y=df_DA_top_pay.index, hue="median", ax=ax[0], palette="dark:b_r")
+
+# Top 10 Most In-Demand Skills for Data Analysts
+sns.barplot(data=df_DA_skills, x="median", y=df_DA_skills.index, hue="median", ax=ax[1], palette="light:b")
+
+plt.show()
+
+```
+
+# Result
+
+Here's the breakdown of the highest-paid & most in-demand skills for data analysts in the US:
+
+![Visualization for the code](https://github.com/firaterkn/Personal_Python_Project/blob/main/3_Project/output4.png)
+
